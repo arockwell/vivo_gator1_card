@@ -1,0 +1,12 @@
+:dev:
+  :login: dev_login
+  :passcode: password
+  :host: dev_server
+  :port: 61619
+  :ssl: true
+:prod: 
+  :login: prod_login
+  :passcode: password
+  :host: prod_server
+  :port: 61619
+  :ssl: true
