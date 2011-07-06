@@ -1,0 +1,34 @@
+OVERVIEW
+
+Consumes XML messages from an ActiveMQ message queue that are of the form:
+
+<ImageChange>
+  <DateUpdate></DateUpdate>
+  <Ufid></Ufid>
+  <Image><!-- Image data is base64 encoded --></Image>
+</ImageChange>
+
+The program proportionally scales down the images to the largest size VIVO can use (200x200) and writes the original image and the scaled down image:
+
+ufid.jpeg
+ufid_small.jpeg
+
+INSTALLATION
+
+Install the following gems:
+
+stomp
+nokogiri
+base64
+RMagick
+yaml
+
+Note that RMagick requires a C library to be installed.
+
+CONFIGURATION
+
+Modify example.config.yml with the connection information.
+
+USING
+
+ruby g1card.rb 
